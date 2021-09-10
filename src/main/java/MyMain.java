@@ -1,29 +1,69 @@
 import java.util.Scanner;
 
 public class MyMain {
-    
+
     // Counts the number of 'a', 'b', and 'c' chars in str
     public static int countABC(String str) {
-        // REPLACE WITH YOUR CODE
-        return -1;
+        int numberofA = 0;
+        int numberofB = 0;
+        int numberofC = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'a') {
+                numberofA++;
+            } else if (str.charAt(i) == 'b') {
+                numberofB++;
+            } else if (str.charAt(i) == 'c') {
+                numberofC++;
+            }
+        }
+
+        return numberofA + numberofB + numberofC;
     }
+
 
     // Checks to see whether or not str contains 'The' or 'the'
     public static boolean containsThe(String str) {
-        // REPLACE WITH YOUR CODE
-        return false;
+
+        int x = (str.indexOf("the"));
+        int y = (str.indexOf("The"));
+        if (x < 0) {
+            return false;
+        } else if (y < 0) {
+            return false;
+        } else if (x > 0) {
+            return true;
+        } else if (y > 0) {
+            return true;
+
+
+        }
+
     }
 
     // Checks whether str is a palindrome or not
     public static boolean isPalindrome(String str) {
-        // REPLACE WITH YOUR CODEE
-        return false;
-    }
-    
-    
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == str.charAt(str.length() - i - 1)) {
+                return true;
+            } else
+                return false;
+        }
 
-        // YOUR CODE HERE
-    }
+
 }
+
+
+
+
+        public static void main (String[]args){
+            Scanner scan = new Scanner(System.in);
+
+            System.out.println(countABC("asdfghjkl"));
+            System.out.println(containsThe("the athenian school"));
+            System.out.println(isPalindrome("tacocat"));
+
+        }
+
+    }
+
+

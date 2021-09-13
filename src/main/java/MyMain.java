@@ -34,10 +34,9 @@ public class MyMain {
             return true;
         } else if (y > 0) {
             return true;
-
-
         }
 
+        return false;
     }
 
     // Checks whether str is a palindrome or not
@@ -49,21 +48,18 @@ public class MyMain {
                 return false;
         }
 
+        return false;
+    }
 
-}
+    public static void main (String[]args){
+        Scanner scan = new Scanner(System.in);
 
-
-
-
-        public static void main (String[]args){
-            Scanner scan = new Scanner(System.in);
-
-            System.out.println(countABC("asdfghjkl"));
-            System.out.println(containsThe("the athenian school"));
-            System.out.println(isPalindrome("tacocat"));
-
-        }
+        System.out.println(countABC("asdfghjkl"));
+        System.out.println(containsThe("the athenian school"));
+        System.out.println(isPalindrome("tacocat"));
 
     }
+
+}
 
 

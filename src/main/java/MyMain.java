@@ -26,17 +26,11 @@ public class MyMain {
 
         int x = (str.indexOf("the"));
         int y = (str.indexOf("The"));
-        if (x < 0) {
+        if (x < 0 && y<0) {
             return false;
-        } else if (y < 0) {
-            return false;
-        } else if (x > 0) {
-            return true;
-        } else if (y > 0) {
-            return true;
+        } else{ return true;}
 
 
-        }
 
     }
 
@@ -45,11 +39,12 @@ public class MyMain {
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == str.charAt(str.length() - i - 1)) {
                 return true;
-            } else
+            } else {
                 return false;
+            }
         }
 
-
+        return true;
 }
 
 
